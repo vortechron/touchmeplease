@@ -1,0 +1,18 @@
+# Swift Package Manager
+.build/
+.swiftpm/
+Package.resolved
+
+# Built app bundle (produced by ./bundle.sh)
+touchmeplease.app/
+
+# macOS
+.DS_Store
+
+# Xcode
+*.xcodeproj
+xcuserdata/
+DerivedData/
+
+# Internal planning scratch (superseded by CONTRIBUTING.md)
+PLAN.md

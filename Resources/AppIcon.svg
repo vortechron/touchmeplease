@@ -1,0 +1,51 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3A3D4A"/>
+      <stop offset="1" stop-color="#1C1E26"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F4F5F8"/>
+      <stop offset="1" stop-color="#D9DCE4"/>
+    </linearGradient>
+    <radialGradient id="dot" cx="0.35" cy="0.3" r="0.8">
+      <stop offset="0" stop-color="#FF6B6B"/>
+      <stop offset="0.5" stop-color="#FF3B30"/>
+      <stop offset="1" stop-color="#D0021B"/>
+    </radialGradient>
+    <filter id="dotGlow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="18" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="panelShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="18" stdDeviation="26" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <!-- rounded-square background (macOS Big Sur style) -->
+  <rect x="92" y="92" width="840" height="840" rx="188" ry="188" fill="url(#bg)"/>
+  <rect x="92" y="92" width="840" height="840" rx="188" ry="188" fill="none" stroke="#ffffff" stroke-opacity="0.06" stroke-width="2"/>
+
+  <!-- floating translucent panel -->
+  <g filter="url(#panelShadow)">
+    <rect x="238" y="286" width="548" height="452" rx="56" ry="56" fill="url(#panel)"/>
+  </g>
+
+  <!-- panel header bar -->
+  <rect x="238" y="286" width="548" height="96" rx="56" ry="56" fill="#C7CBD6"/>
+  <rect x="238" y="338" width="548" height="44" fill="#C7CBD6"/>
+
+  <!-- three session rows -->
+  <g>
+    <rect x="290" y="430" width="300" height="34" rx="17" fill="#B4B9C6"/>
+    <rect x="290" y="516" width="360" height="34" rx="17" fill="#B4B9C6"/>
+    <rect x="290" y="602" width="250" height="34" rx="17" fill="#B4B9C6"/>
+  </g>
+
+  <!-- status dots on the left of two rows (working / idle) -->
+  <circle cx="700" cy="533" r="20" fill="#FF9500"/>
+  <circle cx="700" cy="619" r="20" fill="#B4B9C6"/>
+
+  <!-- the prominent "waiting on you" red dot on the top row -->
+  <circle cx="700" cy="447" r="34" fill="url(#dot)" filter="url(#dotGlow)"/>
+</svg>
