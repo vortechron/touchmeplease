@@ -12,7 +12,7 @@ session monitor, AI coding assistant, Anthropic
 </p>
 
 <p align="center">
-  <img src="docs/screenshot.png" alt="touchmeplease floating panel listing Claude desktop sessions with red waiting and orange working status dots" width="420">
+  <img src="docs/screenshot.png" alt="touchmeplease floating panel with focus timer, todo list, and session status dots" width="420">
 </p>
 
 <p align="center">
